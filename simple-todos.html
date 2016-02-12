@@ -1,0 +1,28 @@
+<head>
+  <title>Matt Calc</title>
+</head>
+
+<body>
+<div class="container">
+  <header>
+    <h1>Matt Calc</h1>
+    <form class="new-equation">
+      <input type="text" name="username" placeholder="Your Name"/>
+      <input type="text" name="text" placeholder="Enter equation"/>
+      <input type="submit" value="submit"/>
+    </form>
+  </header>
+
+  <ul>
+    {{#each equations}}
+      {{> equation}}
+    {{/each}}
+  </ul>
+</div>
+</body>
+
+<template name="equation">
+  <li>
+    <span class="text"><strong>{{username}}</strong> - {{text}}</span>
+  </li>
+</template>
